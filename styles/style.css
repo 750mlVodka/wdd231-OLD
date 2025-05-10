@@ -2,7 +2,7 @@ h1, h2, h3, h4 {
     font-family: 'Roboto', sans-serif
 }
 
-p, span {
+p, span, a, li, button {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -100,7 +100,7 @@ main {
 }
 
 
-/* Grid */
+/* --- Grid --- */
 
 .grid-layout {
     display: grid;
@@ -203,6 +203,16 @@ section {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #ddd;
-    color: black;
+    background-color: #004f88;
+    color: white;
+}
+
+footer .myName::after,
+footer .myName::before {
+    content: "🥝";
+}
+
+#lastModified {
+    font-size: small;
+    color: yellow
 }
