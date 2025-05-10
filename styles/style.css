@@ -19,8 +19,8 @@ header{
 
 header img {
     width: 100px;
-    height: auto;
-    border-radius: 10px;
+    height: 120px;
+    object-fit: cover;
 }
 
 header span {
@@ -121,6 +121,12 @@ main {
     grid-column: span 3;
 }
 
+.location img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
 .filters {
     margin-bottom: 1rem;
     text-align: center;
@@ -156,6 +162,11 @@ main {
     .certificate {
         grid-column: span 1;
     }
+
+    .courses {
+        flex-direction: column;
+        width: 90%;
+    }
 }
 
 .course-work h2,
@@ -167,8 +178,9 @@ main {
 
 section {
     margin-bottom: 2rem;
-    border: 2px solid black;
     border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .course-work ul {
