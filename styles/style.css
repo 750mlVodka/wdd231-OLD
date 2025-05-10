@@ -171,17 +171,14 @@ section {
     border-radius: 10px;
 }
 
-
 .course-work ul {
     padding: 2rem;
 }
 
-
-
 .courses button {
     padding: 1rem 4rem;
-    background-color: #443030;
     color: white;
+    background-color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -189,6 +186,18 @@ section {
 
 .courses button:hover {
     background-color: #005fa3;
+}
+
+.course-btn.completed {
+    background-color: green;
+}
+
+.course-btn.incompleted {
+    background-color: crimson;
+}
+
+.credits {
+    margin-top: 1rem;
 }
 
 footer {
