@@ -13,12 +13,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/653120ec51.js" crossorigin="anonymous"></script>
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
 </head>
 
 <body>
@@ -55,7 +55,7 @@
             </section>
     
             <section class="location">
-                <h2>Toloria, Madagascar</h2>
+                <h2>CDMX, Mexico</h2>
                 <img src="https://picsum.photos/150/150" alt="">
                 <p>Lorem, ipsum dolor.</p>
             </section>
@@ -64,18 +64,18 @@
                 <h2>Web and Computer Programing Certificate</h2>
     
                 <div class="filters">
-                    <button>All</button>
-                    <button>CSE</button>
-                    <button>WDD</button>
+                    <button id="btnAll">All</button>
+                    <button id="btnCSE">CSE</button>
+                    <button id="btnWDD">WDD</button>
                 </div>
     
-                <div class="courses">
-                    <button>CSE 110</button>
-                    <button>WDD 130</button>
-                    <button>CSE 111</button>
-                    <button>CSE 210</button>
-                    <button>WDD 131</button>
-                    <button>WDD 231</button>
+                <div class="courses" id="courseList">
+                    <button class="course-btn">CSE 110</button>
+                    <button class="course-btn">WDD 130</button>
+                    <button class="course-btn">CSE 111</button>
+                    <button class="course-btn">CSE 210</button>
+                    <button class="course-btn">WDD 131</button>
+                    <button class="course-btn">WDD 231</button>
                 </div>
             </section>
         </div>
@@ -84,6 +84,7 @@
     <footer>
         <p>&copy; <span id="currentyear"></span></p>
         <p>Yamsir Hernandez Perez <br> Mexico </p>
+        <span id="lastModified"></span>
     </footer>
 </body>
 
