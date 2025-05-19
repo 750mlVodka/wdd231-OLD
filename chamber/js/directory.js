@@ -16,7 +16,7 @@
 
             card.innerHTML = `
             
-            <img src="${member.image}" alt="${member.name} logo">
+            <img src="${member.image}" alt="${member.name} logo" loading="lazy">
             <h3>${member.name}</h3>
             <p><strong>Address:</strong> ${member.address}</p>
             <p><strong>Phone:</strong> ${member.phone}</p>
