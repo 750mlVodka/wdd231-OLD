@@ -1,4 +1,3 @@
-
 const gridBtn = document.getElementById("gridViewBtn");
 const listBtn = document.getElementById("listViewBtn");
 const directory = document.getElementById("directory");
