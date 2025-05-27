@@ -26,8 +26,8 @@ header {
     gap: 1rem;
 }
 
-.desktop-nav a,
-.desktop-nav button {
+.nav-links a,
+.nav-links button {
     margin: 0 0.5rem;
     text-decoration: none;
     color: black;
@@ -105,8 +105,25 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .desktop-nav {
-        display: none;
+    .nav-links {
+        display: block;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 2rem;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .nav-links a {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .nav-links a:hover {
+        background-color: #007bff;
+        color: #f0f0f0;
+        border-radius: 6px;
     }
 
     .mobile-nav {
