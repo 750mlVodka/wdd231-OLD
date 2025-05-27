@@ -106,7 +106,7 @@ footer {
 
 @media (max-width: 768px) {
     .nav-links {
-        display: block;
+        display: none;
         flex-direction: column;
         gap: 1rem;
         align-items: center;
@@ -147,6 +147,22 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+}
+
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 0;
+        animation: none;
+    }
+
+    .nav-links a:hover {
+        background-color: transparent;
+        color: #007bff;
+        font-weight: bold;}
 }
 
 .view-toggle {
