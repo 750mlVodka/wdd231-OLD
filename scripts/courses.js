@@ -80,7 +80,7 @@ const courses = [
 
 
 function displayCourses(filter = 'All') {
-    const container = document.querySelector('.courses');
+    const container = document.getElementById("courseList");
     container.innerHTML = '';
 
 
@@ -96,6 +96,7 @@ function displayCourses(filter = 'All') {
         const btn = document.createElement('button');
         btn.textContent = `${course.subject} ${course.number}`;
         btn.classList.add('course-btn');
+        btn.id = `${courses.indexOf(course)}` //Index as ID
         if (course.completed) {
             btn.classList.add('completed');
         } else {
@@ -116,4 +117,34 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btnAll').addEventListener('click', () => displayCourses('All'));
     document.getElementById('btnCSE').addEventListener('click', () => displayCourses('CSE'));
     document.getElementById('btnWDD').addEventListener('click', () => displayCourses('WDD'));
+});
+
+const dialogBox = document.querySelector("#dialogBox");
+const closeButton = document.querySelector("#closeButton");
+
+const modalSubject = document.querySelector("#modalSubject");
+const modalTitle = document.querySelector("#modalTitle");
+const modalCredits = document.querySelector("#modalCredits");
+const modalDescription = document.querySelector("#modalDescription");
+const modalTechnology = document.querySelector("#modalTechnology")
+
+closeButton.addEventListener("click", () => {
+    dialogBox.close();
+});
+
+document.getElementById("courseList").addEventListener("click", (x) => {
+    const courseId = x.target.id;
+
+    if (courseId) {
+        const course = courses[courseId];
+
+        modalSubject.textContent = course.subject;
+        modalTitle.textContent = `${course.subject} ${course.number} - ${course.title}`;
+        modalCredits.textContent = `Credits: ${course.credits}`;
+        modalCertificate.textContent = `Certificate: ${course.certificate}`;
+        modalDescription.textContent = course.description;
+        modalTechnology.textContent = `Technologies: ${course.technology.join(', ')}`;
+
+        dialogBox.showModal();
+    }
 });

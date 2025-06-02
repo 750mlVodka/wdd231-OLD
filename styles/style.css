@@ -228,3 +228,16 @@ footer .myName::before {
     font-size: small;
     color: yellow
 }
+
+
+/* --- Modals --- */
+
+dialog {
+    border: 1 px solid black;
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+}
