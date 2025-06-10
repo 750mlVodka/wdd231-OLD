@@ -1,8 +1,15 @@
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Roboto', sans-serif
 }
 
-p, span, a, li, button {
+p,
+span,
+a,
+li,
+button {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -20,7 +27,7 @@ header {
     height: auto;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -37,7 +44,7 @@ header {
     display: none;
 }
 
-main{
+main {
     padding: 0 6rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -72,7 +79,8 @@ main{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 1rem;
-    padding: 1rem;;
+    padding: 1rem;
+    ;
 }
 
 .info-grid h3 {
@@ -83,7 +91,7 @@ main{
 }
 
 .info-grid div {
-    border-bottom:  solid #cccccc;
+    border-bottom: solid #cccccc;
     background-color: #f8f8f8;
 }
 
@@ -195,6 +203,44 @@ footer {
     font-size: 1.5rem;
 }
 
+#allplaces div {
+    grid-template-areas:
+        "photo name"
+        "photo description"
+        "photo location";
+}
+
+#allplaces div h2 {
+    margin: 1rem 10px;
+    grid-area: name;
+}
+
+#allplaces div img {
+    width: 100%;
+    grid-area: photo;
+}
+
+#allplaces div p {
+    margin: 1rem 10px;
+    grid-area: description;
+}
+
+#allplaces div address {
+    margin: 1px 10px;
+    grid-area: location;
+}
+
+#allplaces div button {
+    margin: 16px 4rem;
+    padding: 0.5rem 1rem;
+    background-color: #146CCD;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    grid-area: button;
+}
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -240,6 +286,43 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
+    #allplaces div {
+        margin: 1rem 8px;
+        border: 1px solid #999;
+        background-color: #eee;
+        border-radius: 8px;
+        overflow: hidden;
+
+        display: grid;
+        grid-template-areas:
+            "name"
+            "photo"
+            "description"
+            "location"
+            "button"
+        ;
+    }
+
+    #allplaces div h2 {
+        margin: 1rem 10px;
+        grid-area: name;
+    }
+
+    #allplaces div img {
+        width: 100%;
+        grid-area: photo;
+    }
+
+    #allplaces div p {
+        margin: 1rem 10px;
+        grid-area: description;
+    }
+
+    #allplaces div address {
+        margin: 1px 10px;
+        grid-area: location;
+    }
 }
 
 @media (min-width: 769px) {
@@ -255,7 +338,49 @@ footer {
     .nav-links a:hover {
         background-color: transparent;
         color: #007bff;
-        font-weight: bold;}
+        font-weight: bold;
+    }
+
+        #allplaces div {
+        margin: 1rem 8px;
+        border: 1px solid #999;
+        background-color: #eee;
+        border-radius: 8px;
+        overflow: hidden;
+
+        display: grid;
+        grid-template-areas:
+            "name name"
+            "photo description"
+            "photo location"
+            "button button"
+        ;
+    }
+
+    #allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+        #allplaces div h2 {
+        margin: 1rem 10px;
+        grid-area: name;
+    }
+
+    #allplaces div img {
+        width: 200px;
+        grid-area: photo;
+    }
+
+    #allplaces div p {
+        margin: 1rem 10px;
+        grid-area: description;
+    }
+
+    #allplaces div address {
+        margin: 1px 10px;
+        grid-area: location;
+    }
 }
 
 .view-toggle {
