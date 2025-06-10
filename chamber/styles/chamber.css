@@ -381,6 +381,12 @@ footer {
         margin: 1px 10px;
         grid-area: location;
     }
+
+    #allplaces div img:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+        filter: brightness(1.1);
+    }
 }
 
 .view-toggle {
