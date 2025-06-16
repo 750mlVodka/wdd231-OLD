@@ -21,9 +21,16 @@ body {
     height: 100dvh;
     display: flex;
     flex-direction: column;
-    font-family: 'Montserrat', sans-serif;
     background-color: var(--background);
     color: var(--text);
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+input, button {
+    font-family: 'Roboto Mono', sans-serif;
 }
 
 header {
