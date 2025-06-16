@@ -37,6 +37,21 @@ header {
     box-sizing: border-box;
 }
 
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    background-color: rgba(0, 0, 0, 0.5); /* oscuro semi-transparente */
+    z-index: 2; /* debajo del nav pero arriba del resto */
+    display: none; /* oculto por defecto */
+}
+#overlay.active {
+    display: block;
+}
+
+
 .logo {
     letter-spacing: 3px;
 }
@@ -87,6 +102,8 @@ main {
     height: 80dvh; 
     display: flex;
     align-items: stretch;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .hero-container {
@@ -174,10 +191,22 @@ main {
     display: block;
 }
 
+/* Footer */
+footer {
+    text-align: center;
+    align-items: center;
+}
+
+
 /* Rsponsive Navbar */
+/* Desktop Version */
 @media screen and (min-width: 678px) {
+    body{
+        overflow-y: hidden;
+    }
     .nav {
         display: flex;
+        z-index: 1;
         position: relative;
         right: auto;
         top: auto;
@@ -186,7 +215,6 @@ main {
         padding: 0;
         align-items: center;
         background-color: var(--background);
-
     }
 
     .navlink {
@@ -204,5 +232,59 @@ main {
     .burger {
         font-size: 1.2em;
         display: none;
+    }
+}
+
+/* Mobile Version */
+@media screen and (max-width: 678px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav {
+        z-index: 3;
+    }
+    .hero-container {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .hero-container .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.2;
+    }
+
+    .hero-container .about {
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
+        background: transparent;
+        color: var(--text);
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about h1,
+    .about p,
+    .about button,
+    .about form {
+        width: 80%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about form button {
+        width: 100%;
     }
 }
