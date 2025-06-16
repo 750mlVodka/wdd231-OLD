@@ -44,21 +44,6 @@ header {
     box-sizing: border-box;
 }
 
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100dvh;
-    background-color: rgba(0, 0, 0, 0.5); /* oscuro semi-transparente */
-    z-index: 2; /* debajo del nav pero arriba del resto */
-    display: none; /* oculto por defecto */
-}
-#overlay.active {
-    display: block;
-}
-
-
 .logo {
     letter-spacing: 3px;
 }
@@ -70,6 +55,9 @@ header {
     cursor: pointer;
 }
 
+.fa,.fa-bars,.fa-brands,.fa-facebook,.fa-instagram,.fa-x-twitter {
+    font-size: 1.5rem;
+}
 .nav {
     margin: 0;
     position: absolute;
