@@ -6,7 +6,7 @@ const navs = [{
     },
     {
         Text: ' Contact ',
-        Url: ' contact.html ',
+        Url: ' contact.html',
         Class: ' contact',
         Alt: ' Click Here to visit Contact Link '
     },
@@ -21,7 +21,7 @@ const navs = [{
 
 const navBarMarkup = `
 ${navs.map(nav => 
-    `<li class="navlink"><a href=${nav.Url} class="${nav.Class}" alt="${nav.Alt}">${nav.Text}</a>`).join(' ')}</li>
+    `<li class="navlink"><a href=${nav.Url} class="${nav.Class}" alt="${nav.Alt}">${nav.Text}</a>`).join('')}</li>
 `;
 
 document.querySelector('ul').innerHTML = navBarMarkup
