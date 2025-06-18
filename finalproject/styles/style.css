@@ -152,6 +152,11 @@ main {
     border-radius: 4px;
 }
 
+.modal-button {
+    width: 150px;
+    padding: 0.5rem 1rem;
+}
+
 .about button:hover {
     background-color: var(--accent);
     color: var(--background);
@@ -300,6 +305,62 @@ footer {
     align-items: center;
     margin-top: auto;
 }
+
+.modal-toggle {
+    display: none;
+}
+
+.modal-button {
+    background-color: var(--secondary);
+    color: var(--text);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: var(--accent);
+    color: var(--background);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(37, 175, 239, 0.692);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.781);
+}
+
+.modal-toggle:checked + .modal {
+    display: flex;
+}
+
+.close-button {
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+}
+
 
 
 /* Rsponsive Navbar */
