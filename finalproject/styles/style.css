@@ -19,11 +19,11 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100dvh;
-    display: flex;
     flex-direction: column;
     background-color: var(--background);
     color: var(--text);
     font-family: 'Roboto Mono', sans-serif;
+    overflow-x: hidden;
 }
 
 h1,
@@ -105,18 +105,18 @@ a {
 
 /* Hero */
 main {
-    height: 80dvh;
+    flex-grow: 1;
     display: flex;
     align-items: stretch;
     margin: 0 auto;
     max-width: 1200px;
-    flex: 1;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .hero-container {
     display: flex;
     width: 100%;
-    height: 100%;
 }
 
 .hero-container .about,
@@ -206,14 +206,15 @@ main {
     display: flex;
     gap: 2rem;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
+    flex: 1;
 }
 
 .contact-info {
     flex: 1;
-    background: var(--primary);
+    background: linear-gradient(45deg, var(--background), var(--primary));
     padding: 2rem;
     border-radius: 1rem;
     color: var(--text);
@@ -294,8 +295,10 @@ main {
 
 /* Footer */
 footer {
+    height: 10dvh;
     text-align: center;
     align-items: center;
+    margin-top: auto;
 }
 
 
@@ -303,7 +306,7 @@ footer {
 /* Desktop Version */
 @media screen and (min-width: 678px) {
     body {
-        overflow-y: hidden;
+        overflow-y: auto;
     }
 
     .nav {
@@ -350,6 +353,8 @@ footer {
     .hero-container {
         position: relative;
         flex-direction: column;
+        width: 100%;
+        max-width: 100%;
     }
 
     .hero-container .hero-image {

@@ -1,7 +1,7 @@
 const navs = [{
         Text: ' Home ',
         Url: 'index.html',
-        Class: ' Home ',
+        Class: ' home ',
         Alt: ' Click here to view the home link '
     },
     {
@@ -11,10 +11,10 @@ const navs = [{
         Alt: ' Click Here to visit Contact Link '
     },
     {
-        Text: ' Calendar ',
-        Url: ' calendar.html',
-        Class: ' calendar ',
-        Alt: ' Click here to visit Calendar Link '
+        Text: ' Gallery ',
+        Url: ' gallery.html',
+        Class: ' galerry ',
+        Alt: ' Click here to visit Gallery Link '
     }
 ];
 

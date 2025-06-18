@@ -31,7 +31,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/gallery.css">
     <script src="scripts/nav-link.js" defer></script>
+    <script src="scripts/gallery.js"></script>
 </head>
 <body>
     <header>
@@ -45,22 +47,11 @@
     </header>
 
     <main>
-        <div class="hero-container">
-            <section class="about">
-                <h1>Local Running Club</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum consequatur veritatis quas ducimus, hic tempora voluptatem ad sapiente quasi optio excepturi animi exercitationem quia itaque eveniet atque quidem tenetur facere?</p>
-                <button>Learn More</button>
-                <form action="submit">
-                    <label for="email">Subscribe to our newsletter:</label>
-                    <div class="form-row">
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                        <button type="submit">Subscribe</button>
-                    </div>
-                </form>
-            </section>
-            <section class="hero-image">
-                <img src="images/running.webp" loading="lazy" alt="Hero Image Running Club">    
-            </section>
+        <div class="gallery-content">
+            <h1>Gallery of us</h1>
+            <div id="gallery-container" class="grid-gallery">
+                <!-- DOM elements will be inserted here  -->
+            </div>
         </div>
     </main>
 
